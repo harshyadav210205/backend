@@ -1,0 +1,24 @@
+server:port: 8080
+
+spring:application:name: cyber-incident-backend
+
+data:mongodb:uri: mongodb://localhost:27017/cyber_incident_db
+
+#cache:type: redis
+
+management:endpoints:web:exposure:include: health,info,metrics
+
+jwt:
+  secret: this_is_a_super_secret_key_that_should_be_long_and_secure
+
+spring:
+  session:
+    store-type: none
+
+    spring:
+      ai:
+        openai:
+          api-key: YOUR_OPENAI_KEY
+          chat:
+            options:
+              model: gpt-4o-mini

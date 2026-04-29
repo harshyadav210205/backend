@@ -1,0 +1,17 @@
+5️⃣ Docker Setup
+
+Create file:
+
+📄 Dockerfile
+
+FROM openjdk:21
+
+WORKDIR /app
+
+COPY target/backend.jar backend.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java","-jar","backend.jar"]
+
+📄 docker-compose.yml
